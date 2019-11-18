@@ -1,0 +1,5 @@
+{
+    "PORT":8080,
+    "mongodburl":"mongodb://localhost:27017",
+    "dbname":"config"
+}
