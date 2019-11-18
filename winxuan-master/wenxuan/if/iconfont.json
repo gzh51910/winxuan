@@ -1,0 +1,79 @@
+{
+  "id": "1516183",
+  "name": "wxb",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "259485",
+      "name": "图书",
+      "font_class": "tushu",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "852109",
+      "name": "我的",
+      "font_class": "mine",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "1985007",
+      "name": "科技",
+      "font_class": "keji",
+      "unicode": "e635",
+      "unicode_decimal": 58933
+    },
+    {
+      "icon_id": "4427411",
+      "name": "生活",
+      "font_class": "tubiaozhizuomobanyihuifu-",
+      "unicode": "e6a1",
+      "unicode_decimal": 59041
+    },
+    {
+      "icon_id": "4670132",
+      "name": "艺术",
+      "font_class": "yishu",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "5113132",
+      "name": "生鲜_鸭子",
+      "font_class": "shengxian_yazi",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    },
+    {
+      "icon_id": "6486527",
+      "name": "学习",
+      "font_class": "xuexi",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "8353898",
+      "name": "乡土文学",
+      "font_class": "xiangtuwenxue",
+      "unicode": "e628",
+      "unicode_decimal": 58920
+    },
+    {
+      "icon_id": "10307208",
+      "name": "经济管理学院",
+      "font_class": "jingjiguanlixueyuan",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
+      "icon_id": "10809844",
+      "name": "赞 点赞",
+      "font_class": "changyongtubiao-xianxingdaochu-zhuanqu-",
+      "unicode": "e73c",
+      "unicode_decimal": 59196
+    }
+  ]
+}

@@ -1,11 +1,11 @@
 <template>
-  <div class="box">
+  <div style="100%">
     <el-container>
       <el-header style="height:44px;width:100%">
         <span style="color:#dd0505;font-size:40px;position:absolute;left:5%" @click="goback">&lt;</span>文轩登录
       </el-header>
     </el-container>
-    <el-form :rules="rules" :model="news" ref="news" style="margin-top:1px">
+    <el-form :rules="rules" :model="news" ref="news" style="margin-top:60px">
       <el-form-item prop="username">
         <el-input v-model="news.username" placeholder="用户名/邮箱/手机号" style="height:38px"></el-input>
       </el-form-item>
@@ -40,10 +40,10 @@
       <span style="margin-left:5%;">
         <img src="../img/image1.png" alt />
       </span>
-      <span style="margin-left:8%;">
+      <span style="margin-left:5%;">
         <img src="../img/image2.png" alt />
       </span>
-      <span style="margin-left:6%;">
+      <span style="margin-left:5%;">
         <img src="../img/image3.png" alt />
       </span>
     </p>
@@ -108,8 +108,8 @@ export default {
     goback() {
       this.$router.push("/home");
     },
-    gotoReg(){
-      this.$router.push('/reg');
+    gotoReg() {
+      this.$router.push("/reg");
     }
   }
 };
