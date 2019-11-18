@@ -3,7 +3,7 @@ import Vue from 'vue'
 // 引入vue-router
 import VueRouter from 'vue-router'
 import axios from 'axios'
-Vue.prototype.$axios=axios;
+Vue.prototype.$axios = axios;
 
 // 用vue使用vue-router
 Vue.use(VueRouter)
@@ -19,30 +19,31 @@ import Search from '../pages/Search.vue'
 
 // 实例化VueRouter并配置参数
 const router = new VueRouter({
-    routes:[{
-        name:'home',
-        path:'/home',
-        component:Home
-    },{
-        name:'search',
-        path:'/search',
-        component:Search
-    },{
-        name:'login',
-        path:'/login',
-        component:Login
-    },{
-        name:'reg',
-        path:'/reg',
-        component:Reg
-    },{
-        name:'cart',
-        path:'/catr',
-        component:Cart
-    },{
-        name:'mine',
-        path:'/mine',
-        component:Mine
+    // mode: history,
+    routes: [{
+        name: 'home',
+        path: '/home',
+        component: Home
+    }, {
+        name: 'search',
+        path: '/search',
+        component: Search
+    }, {
+        name: 'login',
+        path: '/login',
+        component: Login
+    }, {
+        name: 'reg',
+        path: '/reg',
+        component: Reg
+    }, {
+        name: 'cart',
+        path: '/catr',
+        component: Cart
+    }, {
+        name: 'mine',
+        path: '/mine',
+        component: Mine
     }]
 })
 

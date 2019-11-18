@@ -1,12 +1,5 @@
 <template>
   <div>
-    <header>
-      <a href class="logo">文轩网</a>
-      <div class="demo-input-suffix">
-        <el-input placeholder="请输入内容" suffix-icon="el-icon-search" v-model="input2" size="small"></el-input>
-      </div>
-      <a href class="user">登陆</a>
-    </header>
     <main>
       <router-view />
     </main>
