@@ -93,9 +93,9 @@ export default {
               password
             }
           });
-          window.console.log(result);
+          // window.console.log(result);
           if (result.data.status == 1) {
-            this.$router.replace("/reg");
+            this.$router.replace("/home");
           } else {
             alert("用户名或密码错误");
           }

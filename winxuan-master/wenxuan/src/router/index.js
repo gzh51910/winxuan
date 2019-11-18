@@ -38,7 +38,7 @@ const router = new VueRouter({
         component: Reg
     }, {
         name: 'cart',
-        path: '/catr',
+        path: '/cart',
         component: Cart
     }, {
         name: 'mine',

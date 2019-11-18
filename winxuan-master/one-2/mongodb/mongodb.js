@@ -19,13 +19,16 @@ async function F() {
         }, function (err, client) {
             // err:连接数据库失败时的信息
             // client：连接成功后MongoDB客户端
-            if (err) console.log("数据库连接失败",err);
-            console.log("数据库创建成功");
+            if (err) console.log("数据库连接失败", err);
+            // console.log("数据库创建成功");
 
             // 通过client.db()方法获取数据库,如果没有则自动创建
             var sjk = client.db(dbName);
 
-            resolve({client, sjk});
+            resolve({
+                client,
+                sjk
+            });
         });
     })
 
@@ -44,10 +47,16 @@ async function F() {
 }
 
 // 增
-function add() {
-
+async function add(colName, document) {
+    let {
+        client,
+        sjk
+    } = await F();
+    // 获取集合
+    var list = sjk.collection(colName);
+    list.insertOne(document);
+    return "success";
 }
-
 // 删
 function remove() {
 
@@ -78,18 +87,36 @@ async function find(colName) {
     // 通过promise对象将结果返回
     let result = await list.find().toArray();
     // console.log(result);
-    
+
     // 关闭数据库连接
     client.close();
-    
+
     // 将promise对象返回，调用该方法时，通过返回的这个promise对象就可以拿到result
     return result;
 }
+
+
+
+async function findtwo(colName, document) {
+    let {
+        client,
+        sjk
+    } = await F();
+    // 获取集合
+    var list = sjk.collection(colName);
+    // 查询指定用户
+    let result = await list.find(document).toArray();
+    console.log(result);
+    client.close();
+    return result;
+}
+
 // 测试(看是否能连接数据库)
 // find();
 module.exports = {
     add,
     remove,
     updata,
-    find
+    find,
+    findtwo
 }

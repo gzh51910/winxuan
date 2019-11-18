@@ -3,7 +3,7 @@
     <header style="margin-left:8px">
       <a href class="logo">文轩网</a>
       <div class="demo-input-suffix">
-        <el-input placeholder="请输入内容" suffix-icon="el-icon-search" v-model="input2" size="small"></el-input>
+        <el-input placeholder="请输入内容" suffix-icon="el-icon-search" size="small"></el-input>
       </div>
       <a href="#" class="user" @click="goto">登陆</a>
     </header>
@@ -42,7 +42,7 @@
       </div>
     </div>
     <div class="productItem">
-      <a v-for="item in datalist" :key="item._id">
+      <a v-for="item in datalist" :key="item._id" @click="drop">
         <div class="img">
           <img :src="item.img" alt />
         </div>
@@ -295,6 +295,9 @@ export default {
   methods: {
     goto() {
       this.$router.push("/login");
+    },
+    drop() {
+      this.$router.push("/cart");
     }
   },
   async created() {
@@ -323,7 +326,6 @@ export default {
 };
 </script>
 <style>
-/* body{height: 10000px;} */
 .el-carousel__indicators .el-carousel__button {
   width: 7.6px;
   height: 7.6px;
@@ -464,11 +466,12 @@ ul li {
 }
 .list1 {
   padding-left: 0;
+  clear: both;
 }
-.item {
+.module1 .list > li {
   position: relative;
 }
-.module1 .item {
+.module1 .list > li .item {
   display: block;
   position: absolute;
   left: 2.4px;

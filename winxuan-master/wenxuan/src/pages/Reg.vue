@@ -54,7 +54,7 @@
       placeholder="请输入6-12位登录密码"
     />
     <el-switch
-      style="position:absolute;right:20px;top:33.5%"
+      style="position:absolute;right:20px;top:31.5%"
       v-model="value"
       active-color="#ff4949"
       inactive-color="#dddddd"
@@ -102,13 +102,13 @@ export default {
             password
           }
         });
-        // window.console.log(result);
         if (result.data.status != 1) {
           let goBack = await axios.post("http://localhost:1910/reg", {
             username,
             password
           });
           if (goBack.data.status == 1) {
+            alert("注册成功");
             this.$router.replace("/login");
           } else {
             window.console.log("请求发送失败");
